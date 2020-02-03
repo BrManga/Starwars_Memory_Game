@@ -53,8 +53,7 @@ function myFunction(b) {
     }
     // Condition to win the game
     if (win == 16) {
-      document.getElementById("backCounter").innerHTML = "YOU WINNN!!";
-      document.getElementById("backCounter").style.fontSize = "80px";
+      document.getElementById("backCounter").innerHTML = "YOU WIN!!";
     }
     // Deciding game is over
     if ((backCount == 0) & (win != 16)) {
@@ -63,16 +62,13 @@ function myFunction(b) {
         frontface[i].onclick = "";
       }
 
-      return (
-        (document.getElementById("backCounter").innerHTML = "YOU LOSE!!"),
-        (document.getElementById("backCounter").style.fontSize = "80px"),
-        setTimeout(function() {
+      return (document.getElementById("backCounter").innerHTML = "YOU LOSE!!");
+      /*  setTimeout(function() {
           var all = document.getElementsByClassName("frontface");
           for (let i = 0; i < all.length; i++) {
             all[i].style.zIndex = 3;
           }
-        }, 3000)
-      );
+        }, 3000) */
     }
   }
 }
