@@ -63,12 +63,6 @@ function myFunction(b) {
       }
 
       return (document.getElementById("backCounter").innerHTML = "YOU LOSE!!");
-      /*  setTimeout(function() {
-          var all = document.getElementsByClassName("frontface");
-          for (let i = 0; i < all.length; i++) {
-            all[i].style.zIndex = 3;
-          }
-        }, 3000) */
     }
   }
 }
