@@ -14,7 +14,7 @@ var flipped = false;
 var count = 0;
 var firstone;
 var win = 0;
-var backCount = 30;
+var backCount = 24;
 
 //Main Function
 function myFunction(b) {
@@ -62,7 +62,15 @@ function myFunction(b) {
         frontface[i].onclick = "";
       }
 
-      return (document.getElementById("backCounter").innerHTML = "YOU LOSE!!");
+      return (
+        (document.getElementById("backCounter").innerHTML = "YOU LOSE!!"),
+        setTimeout(function() {
+          var all = document.getElementsByClassName("frontface");
+          for (let i = 0; i < all.length; i++) {
+            all[i].style.zIndex = 3;
+          }
+        }, 3000)
+      );
     }
   }
 }
